@@ -11,7 +11,6 @@ import random
 os.makedirs("charts", exist_ok=True)
 
 fake = Faker()
-QUESTION = "How many people are over the age of 40 in this dataset?"
 
 def generate_dataset(n=5000):
     data = []
