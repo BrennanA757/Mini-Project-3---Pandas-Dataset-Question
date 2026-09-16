@@ -59,15 +59,19 @@ def get_age_ranges(filtered):
 def visualize(df):
     plt.figure(figsize=(8,5))
 
+    #Define the bars inside of the chart
     plt.bar(df.keys(), df.values(), color="skyblue")
 
+    #Define maximum height and ticks on the side of the chart
     plt.ylim(0, max(df.values()))
     plt.yticks(range(0, (max(df.values()) + 1), 100))
 
+    #Define the labels for the chart
     plt.title("Number of people over the age of 40")
     plt.xlabel("Age")
     plt.ylabel("People")
 
+    #Define the output path for the resulting chart and then close pyplot
     output_path = "charts/people_over_40.png"
     plt.savefig(output_path)
     plt.close()
